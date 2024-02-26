@@ -27,6 +27,9 @@ const imgCollection = document.getElementsByClassName("img");
 // rimuovo la classe d-none alla prima immagine
 imgCollection[counter].classList.remove("d-none");
 
+// 8.
+    btnTop.classList.add("d-none");
+
 
 // 5. al click incremento o decremento il counter
 // sopra decremento
@@ -35,6 +38,13 @@ btnTop.addEventListener('click', function(){
     imgCollection[counter--].classList.add("d-none");
     // 7.
     imgCollection[counter].classList.remove("d-none");
+
+    btnBottom.classList.remove("d-none");
+
+    if(counter === 0){
+        btnTop.classList.add("d-none");
+    }
+    
 });
 
 // sotto incremento
@@ -43,4 +53,10 @@ btnBottom.addEventListener('click', function(){
     imgCollection[counter++].classList.add("d-none");
     // 7.
     imgCollection[counter].classList.remove("d-none");
+
+    btnTop.classList.remove("d-none");
+    
+    if(counter === images.length -1){
+        btnBottom.classList.add("d-none");
+    }
 });
