@@ -31,12 +31,12 @@ imgCollection[counter].classList.remove("d-none");
 // 5. al click incremento o decremento il counter
 // sopra decremento
 btnTop.addEventListener('click', function(){
-    counter--;
-    console.log(counter);
+    
 });
 
 // sotto incremento
 btnBottom.addEventListener('click', function(){
-    counter++;
-    console.log(counter);
+    // 6.
+    imgCollection[counter++].classList.add("d-none");
+    imgCollection[counter].classList.remove("d-none");
 });
