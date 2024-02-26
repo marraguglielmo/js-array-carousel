@@ -1,6 +1,9 @@
 // elements
 const imgWrapper = document.querySelector('.img-wrapper');
-
+const btnTop = document.querySelector(".top")
+const btnBottom = document.querySelector(".bottom");
+// 4. inizializzo il counter
+let counter = 0;
 
 // 1.
 const images = [
@@ -22,7 +25,18 @@ for(let i = 0; i < images.length; i++){
 const imgCollection = document.getElementsByClassName("img");
 
 // rimuovo la classe d-none alla prima immagine
-imgCollection[0].classList.remove("d-none");
+imgCollection[counter].classList.remove("d-none");
 
-// 4. inizializzo il counter
-const counter = 0;
+
+// 5. al click incremento o decremento il counter
+// sopra decremento
+btnTop.addEventListener('click', function(){
+    counter--;
+    console.log(counter);
+});
+
+// sotto incremento
+btnBottom.addEventListener('click', function(){
+    counter++;
+    console.log(counter);
+});
