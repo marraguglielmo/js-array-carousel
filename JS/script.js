@@ -40,7 +40,7 @@ btnTop.addEventListener('click', function(){
     imgCollection[counter].classList.remove("d-none");
 
     btnBottom.classList.remove("d-none");
-
+    // 10
     if(counter === 0){
         btnTop.classList.add("d-none");
     }
@@ -55,7 +55,7 @@ btnBottom.addEventListener('click', function(){
     imgCollection[counter].classList.remove("d-none");
 
     btnTop.classList.remove("d-none");
-    
+    // 9.
     if(counter === images.length -1){
         btnBottom.classList.add("d-none");
     }
